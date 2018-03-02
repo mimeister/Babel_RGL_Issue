@@ -8,6 +8,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Counter from './reactcomponent';
 import FetchData from './fetchdata';
+import TileView from './tileView';
 
 ReactDOM.render(
     <Counter />,
@@ -17,6 +18,11 @@ ReactDOM.render(
 ReactDOM.render(
 	<FetchData />,
 	document.getElementById('reactcomponentwithapidata')
+);
+
+ReactDOM.render(
+	<TileView />,
+	document.getElementById('tileView')
 );
 
 //document.getElementById("fillThis").innerHTML = getText();

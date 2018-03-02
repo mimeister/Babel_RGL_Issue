@@ -22,17 +22,18 @@ module.exports = {
     ],
 
     module: {
-        rules: [
-            {
-                test: /\.css$/,
-                use: extractCSS.extract(['css-loader? minimize'])
-            },
-            {
-                test: /\.js?$/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-react' ,'@babel/preset-env']
+		rules: [
+			{
+				test: /\.css$/,
+				use: extractCSS.extract(['css-loader? minimize'])
+			},
+			{
+				test: /\.js?$/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+                        //presets: ['@babel/preset-react' ,'@babel/preset-env']
+						presets: [['es2015', { "loose": true }], 'stage-1', 'react']
                     }
                 }
 
